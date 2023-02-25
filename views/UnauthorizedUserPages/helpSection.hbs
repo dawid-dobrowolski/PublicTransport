@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/UserPages/helpSection.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+   
+    <!-- MDB -->
+    <title>PrzejedźSię</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <img src="../Resources/logo.png">
+            </div>
+            <div class="menuList">
+                <ul>
+                    <a href="/news">  <li><i class="fas fa-th-large"></i>Aktualności</li></a>
+                    <a href="/timetable"> <li><i class="fas fa-bus"></i>Rozkład</li> </a>
+                    <a href="/buyTicket"><li><i class="fas fa-ticket-alt"></i>Kup bilet</li></a>
+                    <li id = "active"><i class="far fa-file-alt"></i></i>Pomoc</li>
+                </ul>
+            </div>
+            <div class="menuButtons">
+                <a href="/auth/login"><button type="submit" class="btn">Zaloguj się</button></a>
+                <a href="/auth/register"><button type="submit" class="btn">Zarejestruj się</button></a>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="title"><h1>Pomoc</h1></div>
+            <div class="pomocBox">
+               <form action="/authorization/pomoc" method = "POST">
+                    <div class="form-group">
+                        <br>
+                        <label for="imie">Imię</label>
+                        <br>
+                        <input type="text" class="form-control" id="imie" name="imie">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Nazwisko</label>
+                        <input type="text" class="form-control" id="nazwisko" name="nazwisko">
+                    </div>
+                    <div class="form-group">
+                        <label for="repeatedPassword">E-Mail</label>
+                        <input type="text" class="form-control" id="e-mail" name="e-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="repeatedPassword">Temat</label>
+                        <input type="text" class="form-control" id="topic" name="topic">
+                    </div>
+                    <div class="form-group">
+                        <label for="repeatedPassword">Wiadomość</label>
+                        <input type="text" class="form-control" id="message" name="message" style="height: 120px;">
+                    </div>
+                    <button type="button" id="btn-register" class="btn-own">Wyślij</button>
+
+                    <script>
+                        document.getElementById("btn-register").onclick = function() {myFunction()};
+
+                        function myFunction() {
+                            alert("Wysłałeś wiadomość")
+                        }
+                    </script>
+                </form>
+
+                <div class="informationBox">
+                    <div style="font-weight: bold;">
+                    Informacje
+                    <br>
+                    Kontaktowe
+                    </div>
+                    <br>
+                    Adres:
+                    <br>
+                    ul. Testerów 17
+                    <br>
+                    Kraków 11-111
+                    <br>
+                    Polska
+                    <br><br>
+                    mail: pomoc@gmail.com
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

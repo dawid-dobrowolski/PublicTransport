@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/EditOffer/editOffer.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+    <!-- MDB -->
+    <title>PrzejedźSię</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav>
+        <div class="logo">
+            <img src="../Resources/logo.png">
+        </div>
+        <div class="menuList">
+           <ul>
+                <li id="active"><i class="fas fa-th-large"></i>Edytuj ofertę</li>
+                <a href="/admin/timetable"><li><i class="fas fa-bus"></i>Rozkład</li></a>
+            </ul>
+        </div>
+        <div class="menuButtons">
+            <a href="/"><button type="submit" class="btn"><i class="fas fa-sign-out-alt"></i> Wyloguj się</button></a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="title">
+            <h1>Edytuj ofertę</h1>
+        </div>
+        <div class="background-grid">
+            <div class="buttons">
+
+                <input id="radio_1" class="radio isHidden" name="radio_a" onclick="location.href='/admin/editTicketPrice';" type="radio" >
+                <label for="radio_1" class="label">
+                    <div class="sign">Edytuj cenę biletów</div>
+                </label>
+
+                <input id="radio_2" class="radio isHidden" name="radio_a" onclick="location.href='/admin/editLine';" type="radio" >
+                <label for="radio_2" class="label">
+                    <div class="sign">Edytuj istniejącą linię</div>
+                </label>
+
+                <input id="radio_3" class="radio isHidden" name="radio_a" onclick="location.href='/admin/addNewLine';" type="radio" >
+                <label for="radio_3" class="label">
+                    <div class="sign">Dodaj nową linię</div>
+                </label>
+
+                <input id="radio_4" class="radio isHidden" name="radio_a" onclick="location.href='/admin/deleteLine';" type="radio" >
+                <label for="radio_4" class="label">
+                    <div class="sign">Usuń linię</div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

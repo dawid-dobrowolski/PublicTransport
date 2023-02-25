@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/UserPages/newTicketPrices.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- MDB -->
+    <title>PrzejedźSię</title>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <nav>
+        <div class="logo">
+            <img src="../Resources/logo.png">
+        </div>
+        <div class="menuList">
+            <ul>
+                <a href="/user/news">  <li><i class="fas fa-th-large"></i>Aktualności</li> </a>
+                <a href="/user/timetable"> <li><i class="fas fa-bus"></i>Rozkład</li> </a>
+                <a href="/user/buyTicket"> <li id = "active"><i class="fas fa-ticket-alt"></i>Kup bilet</li> </a>
+                <a href="/user/help">  <li><i class="far fa-file-alt"></i></i>Pomoc</li></a>
+
+                <div id="border"><br></div>
+                <a href ="/user/myTickets"> <li><i class="fas fa-credit-card"></i></i>Moje bilety</li></a>
+                <a href="/user/notifications"> <li ><i class="far fa-bell"></i></i>Moje powiadomienia</li> </a>
+                <a href="/user/account"><li><i class="fas fa-cog"></i></i>Zarządzaj kontem</li></a>
+            </ul>
+        </div>
+        <div class="menuButtons">
+            <a href="/logout"><button type="submit" class="btn"><i class="fas fa-sign-out-alt"></i> Wyloguj się</button></a>
+        </div>
+    </nav>
+    <div class="content">
+
+        <div class="sign-dostepne-bilety">
+
+         <h2> Ceny biletów </h2>
+        </div>
+
+        <div class = "grid-container-background">
+
+            <div class = "ulgowe">
+
+                <div class ="ulgowe_tabela">
+                <table class="t">
+                    <tr class="np">
+                        <th>  bilety ulgowe </th>
+                    </tr>
+                    <tr class="p">
+                        <td> </td>
+
+                        <td> 1 miesiąc </td>
+                        <td> 2 miesiące </td>
+                        <td> 5 miesięcy </td>
+                    </tr>
+                    <tr class="np">
+                        <td> Na 1 linię </td>
+                        <td> 74 zł</td>
+                        <td> 100 zł</td>
+                        <td> 140 zł</td>
+                    </tr>
+
+                    <tr class="p">
+                        <td> Na wszystkie linie </td>
+                        <td> 85 zł</td>
+                        <td> 120 zł</td>
+                        <td> 160 zł</td>
+
+
+                    </tr>
+
+                </table>
+                </div>
+
+
+            </div>
+
+            <br>
+
+            <div class = "ulgowe">
+
+                <div class ="ulgowe_tabela" >
+                    <table class="t">
+                        <tr class="np">
+                            <th>  bilety normalne </th>
+                        </tr>
+                        <tr class="p">
+                            <td> </td>
+
+                            <td> 1 miesiąc </td>
+                            <td> 2 miesiące </td>
+                            <td> 5 miesięcy </td>
+                        </tr>
+                        <tr class="np">
+                            <td> Na 1 linię </td>
+                            <td> 100 zł</td>
+                            <td> 200 zł</td>
+                            <td> 250 zł</td>
+                        </tr>
+
+                        <tr class="p">
+                            <td> Na wszystkie linie </td>
+                            <td> 120 zł</td>
+                            <td> 240 zł</td>
+                            <td> 360 zł</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+            <a href='./buyTicket'> <button type="submit" id="btn-zatwierdz" class="btn-own"> <b>  Anuluj </b> </button> </a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

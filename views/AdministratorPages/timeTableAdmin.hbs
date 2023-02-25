@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no>
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/TimeTable/timetable.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- MDB -->
+    <title>PrzejedźSię</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav>
+        <div class="logo">
+            <img src="../Resources/logo.png">
+        </div>
+        <div class="menuList">
+             <ul>
+                <a href="/admin/editOffer"><li><i class="fas fa-th-large"></i>Edytuj ofertę</li></a>
+                <li id="active"><i class="fas fa-bus"></i>Rozkład</li>
+            </ul>
+        </div>
+        <div class="menuButtons">
+            <a href="/"><button type="submit" class="btn"><i class="fas fa-sign-out-alt"></i> Wyloguj się</button></a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="title"><h1>Rozkład jazdy</h1></div>
+        <div class="rozkładyBox">
+            <div class="autobusyitramwaje">
+                <div class="title"><h2>Autobusy</h2></div>
+                <div class="linieBox" id="autobusy">
+                </div>
+            </div>
+            <div class="autobusyitramwaje">
+                <div class="title"><h2>Tramwaje</h2></div>
+                <div class="linieBox" id="tramwaje">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/TimeTable/timeTable.js"></script>
+<script src="/TimeTable/stops.js"></script>
+</html>

@@ -1,0 +1,65 @@
+div{
+    height: 25px;
+    border-radius: 25px;
+}
+
+p {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 20px;
+    color: #1D3557;
+}
+
+
+
+.container{
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    border: 3px solid white;
+    background-color: #E1E1E1;
+    box-shadow: 0px 0px 15px #A8DADC;
+
+}
+
+.progress{
+    width: 0%;
+    background-color: #A8DADC;
+    animation: progress 10s infinite;
+}
+
+@keyframes progress {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+
+}
+
+
+
+.btn-own {
+    align-content: center;
+    color: #fbfbfb;
+    margin-top: 40px;
+    margin-left: 250px;
+    background-color: #4A5D79;
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-own:hover {
+    color: #fbfbfb;
+    background-color: #1c5185;
+}
+
+
+#btn-zatwierdz{
+    margin-left: 74%;
+
+}

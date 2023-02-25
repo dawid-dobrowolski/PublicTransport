@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/UserPages/buyTicketUnauthorized.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- MDB -->
+    <title>PrzejedźSię</title>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <nav>
+        <div class="logo">
+           <img src="../Resources/logo.png">
+        </div>
+        <div class="menuList">
+            <ul>
+                <a href="/news">  <li><i class="fas fa-th-large"></i>Aktualności</li></a>
+                <a href="/timetable"> <li><i class="fas fa-bus"></i>Rozkład</li> </a>
+                <a href="/buyTicket"><li id="active"><i class="fas fa-ticket-alt"></i>Kup bilet</li></a>
+                <a href="/help"><li><i class="far fa-file-alt"></i>Pomoc</li></a>
+
+            </ul>
+        </div>
+        <div class="menuButtons">
+            <a href="/auth/login"><button type="submit" class="btn">Zaloguj się</button></a>
+            <a href="/auth/register"><button type="submit" class="btn">Zarejestruj się</button></a>
+        </div>
+    </nav>
+    <div class="content">
+
+        <div class="sign-dostepne-bilety">
+        <h2> Dostępne bilety </h2>
+        </div>
+
+        <div class="cena">
+            <a href="/ticketPricesUn"> <p> Sprawdź cenę biletów </p> </a>
+        </div>
+
+        <form action="/ticket/buyTicketUnauthorized" method = "POST">
+
+        <div class = "grid-container-background">
+
+
+
+            <div class="grid-main-item-typ_biletu">
+                <p> <b>  Wybierz typ biletu </b> </p>
+
+                <div class="buttons_1">
+                    <input id="radio_1" class="radio isHidden" name="radio_a" type="radio" VALUE="1" >
+                    <label for="radio_1" class="label"> Ulgowy </label>
+
+                    <input id="radio_2" class="radio isHidden" name="radio_a" type="radio"  value="0">
+                    <label for="radio_2" class="label">
+                        <div>  Normalny </div>
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class="grid-main-item-dlugosc_trwania">
+               <p> <b> Wybierz długość trwania biletu </b> <p>
+
+                <div class="buttons_2">
+                    <input id="radio_3" class="radio isHidden" name="radio_b" type="radio" value="3">
+                    <label for="radio_3" class="label-2"> 3 dni </label>
+
+                    <input id="radio_4" class="radio isHidden" name="radio_b" type="radio" value="7">
+                    <label for="radio_4" class="label-2"> 7 dni </label>
+
+                </div>
+
+            </div>
+
+            <div class="grid-main-item-formularz">
+
+                <p> <b> Wypełnij formularz </b> </p>
+
+                <br>
+
+                <div class="backgroud-form">
+
+                    <div class="new-form">
+
+                    <div class="form-group">
+                        <label id="form-label" for="imie"> <b> Imię </b></label>
+                        <input type="text" class="form-control" id="imie" name="imie" required >
+                    </div>
+                    <div class="form-group">
+                        <label id="form-label" for="nazwisko"> <b> Nazwisko </b> </label>
+                        <input type="text" class="form-control" id="nazwisko" name="nazwisko" required>
+                    </div>
+                    <div class="form-group">
+                        <label id="form-label" for="email"> <b> E-Mail </b></label>
+                        <input type="text" class="form-control" id="email" name="email"  placeholder="name@example.com" required>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+
+
+             <button type="submit" id="btn-zatwierdz" class="btn-own"> <b>  Zatwierdź </b> </button> </a>
+
+
+
+
+        </div>
+        </form>
+
+
+    </div>
+
+    </div>
+</div>
+</body>
+</html>

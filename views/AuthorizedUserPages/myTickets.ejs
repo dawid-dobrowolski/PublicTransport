@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/UserPages/myTickets.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <title>PrzejedźSię</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <img src="../Resources/logo.png">
+            </div>
+            <div class="menuList">
+                <ul>
+                    <a href="/user/news">  <li><i class="fas fa-th-large"></i>Aktualności</li> </a>
+                    <a href="/user/timetable"> <li><i class="fas fa-bus"></i>Rozkład</li> </a>
+                    <a href="/user/buyTicket"> <li><i class="fas fa-ticket-alt"></i>Kup bilet</li> </a>
+                    <a href="/user/help">  <li><i class="far fa-file-alt"></i></i>Pomoc</li></a>
+
+                    <div id="border"><br></div>
+                    <a href ="/user/myTickets"> <li id = "active"><i class="fas fa-credit-card"></i></i>Moje bilety</li></a>
+                    <a href="/user/notifications"> <li ><i class="far fa-bell"></i></i>Moje powiadomienia</li> </a>
+                    <a href="/user/account"><li><i class="fas fa-cog"></i></i>Zarządzaj kontem</li></a>
+                </ul>
+            </div>
+            <div class="menuButtons">
+                <a href="/logout"><button type="submit" class="btn"><i class="fas fa-sign-out-alt"></i> Wyloguj się</button></a>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="title"><h1>Moje Bilety</h1></div>
+            <center>
+            <div>
+            <% if (typeof message != undefined) { %>
+                <center class="komunikat"><%= message %></center>  
+             <% } %>
+            </div>
+        </center>
+            <center>
+            <div class="TicketBox">
+                <div class="TicketList">
+                    <table style="width:100%; margin-bottom:35%;" id="tabela">
+                    <tr class="Legenda">
+                        
+                            <th class="legend">#</th>
+                            <th class="legend">Id biletu</th>
+                            <th class="legend">Ulga</th>
+                            <th class="legend">Data zakupu</th>
+                            <th class="legend">Data wygaśnięcia</th>
+                            <th class="legend">Linie</th>
+                            <th class="legend">Status</th>
+                            <th class="legend">Zwrot</th>
+                        
+                    </tr>
+                    <%
+                    function formattedDate(d = new Date) {
+                        let month = String(d.getMonth() + 1);
+                        let day = String(d.getDate());
+                        const year = String(d.getFullYear());
+                      
+                        if (month.length < 2) month = '0' + month;
+                        if (day.length < 2) day = '0' + day;
+                      
+                        return `${day}/${month}/${year}`;
+                      }
+                      dzien_miesiac_rok = formattedDate()
+                      
+                    %>
+                    <%
+                    if(data.length!=0){
+                    var i=1;
+                    data.forEach(function(row){
+                    %>
+                    <tr>
+                        <%
+                        function formattedDate(d = new Date) {
+                            let month = String(d.getMonth() + 1);
+                            let day = String(d.getDate());
+                            const year = String(d.getFullYear());
+                          
+                            if (month.length < 2) month = '0' + month;
+                            if (day.length < 2) day = '0' + day;
+                          
+                            return `${day}/${month}/${year}`;
+                          }
+                          function addDays(date, days) {
+                            date.setDate(date.getDate() + days);
+                            return date;
+                          }
+                          
+    
+                        dzien_miesiac_rok = formattedDate(row.ticket_date) 
+                        const end_date = addDays(row.ticket_date, row.ticket_period)
+                        dzien_miesiac_rok_end = formattedDate(end_date) 
+                        var ulga, linie, status;
+                        if(row.ticket_type == 1)
+                            ulga = 'Ulgowy'
+                        else
+                            ulga = 'Normalny'
+                        if(row.ticket_line == 0)
+                          linie = 'Wszystkie'
+                        else
+                          linie = row.ticket_line
+                        if(row.status == 0)
+                          status = 'Nieaktywny'
+                        else
+                          status = 'Aktywny'
+                        %>
+                        <form action="/ticket/delete" method = "POST">
+                            <input id="ticket_id" class="radio isHidden" name="ticket_id" type="hidden" value=<%=row.ticket_id %>>
+                        <td class="nr" style="min-width: none;"><%=i; %></td>
+                        <td class="id" name="id" id="id"><%=row.ticket_id %></td>
+                        <td class="discount"><%=ulga %></td>
+                        <td class="buy_date"><%=dzien_miesiac_rok %></td>
+                        <td class="expire_date"><%=dzien_miesiac_rok_end %></td>
+                        <td class="lines"><%=linie %></td>
+                        <td class="status"><%=status %></td>
+                        <th class="button_area"><button type="submit" class="btn2" border-radius:"1px;">Zwrot</button></th>
+                    </form>
+                    </tr>
+                    <%  i++; }) %>
+                    <% } else{ %>
+                        <div colspan="7" class="emptyTable">Aktualnie nie posiadasz żadnych biletów</div>
+                        <tr>
+                        </tr>
+                    <% } %>
+                    </table>
+
+                </div>
+                <!-- <div class="pages">
+                    <i class="fas fa-arrow-left" style="float: left; margin-top:3px;"></i>
+                   <div class="page_nr" id="active">1</div>
+                   <div class="page_nr">2</div>
+                   <i class="fas fa-arrow-right" style="float: left; margin-top:3px;"></i>
+                </div> -->
+            </div>
+         </center>
+                
+
+            
+        </div>
+    </div>
+
+</body>
+</html>

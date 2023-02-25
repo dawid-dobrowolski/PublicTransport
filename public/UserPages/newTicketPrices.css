@@ -1,0 +1,75 @@
+.sign-dostepne-bilety{
+    height: 3em;
+    padding-top: 18px;
+    margin-left: 40%;
+}
+.grid-container-background{
+
+
+    margin: 2% 25%;
+    height: 650px;
+    width: 700px;
+    align-content: center;
+    text-align: center;
+
+}
+
+
+.ulgowe_tabela{
+    align-content: center;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.t{
+    margin: auto;
+    padding-top: 50px;
+}
+
+
+.ulgowe th {
+    height: 45px;
+    background-color: #A8DADC;
+    color: #191919;
+
+}
+
+.ulgowe td {
+    padding: 8px;
+    border: 2px solid #F6F6F6;
+    font-weight: bold;
+}
+
+.ulgowe tr:nth-child(odd) {
+    background-color: #E1E1E1;
+}
+
+.ulgowe tr:nth-child(even) {
+    background-color: rgba(237, 239, 242, 0.69);
+}
+
+
+.btn-own {
+    align-content: center;
+    color: #fbfbfb;
+    margin-top: 10px;
+    background-color: #4A5D79;
+    border-radius: 10px;
+    height: 40px;
+    width: 208px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-own:hover {
+    color: #fbfbfb;
+    background-color: #1c5185;
+}
+
+#btn-zatwierdz{
+    margin-left: 490px;
+
+
+}
+

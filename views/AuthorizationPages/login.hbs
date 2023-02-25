@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/Authorization/login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- MDB -->
+    <title>PrzejedźSię</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <img src="../Resources/logo.png">
+            </div>
+            <div class="menuList">
+                <ul>
+                <a href="/news">  <li><i class="fas fa-th-large"></i>Aktualności</li></a>
+                <a href="/timetable"> <li><i class="fas fa-bus"></i>Rozkład</li> </a>
+                <a href="/buyTicket"><li><i class="fas fa-ticket-alt"></i>Kup bilet</li></a>
+                <a href="/help"><li><i class="far fa-file-alt"></i>Pomoc</li></a>
+                </ul>
+            </div>
+            <div class="menuButtons">
+                <a href="/auth/login"><button type="submit" id="active" class="btn">Zaloguj się</button></a>
+                <a href="/auth/register"><button type="submit" class="btn">Zarejestruj się</button></a>
+            </div>
+        </nav>
+        <div class="content">
+            
+            <div class="rejestracjaBox">
+                <p>Zaloguj się</p>
+                {{#if register}}
+                        <div class="response-positive">
+                            <h2>{{message}}</h2>
+                        </div>
+                        
+                {{else}}
+                        <div class="response">
+                            <h2>{{message}}</h2>
+                        </div>
+                        {{/if}}
+               <form action="/authorization/login" method = "POST">
+                    <div class="form-group">
+                        <br>
+                        <label for="mail">E-Mail</label><br>
+                        <input type="text" class="form-control" id="mail" name="mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Hasło</label><br>
+                        <input type="password" class="form-control" id="password" name="password" required minlength="5" maxlength="32">
+                    </div>
+                    <button type="submit" id="btn-register" class="btn">Zaloguj</button>
+                    <a href="/auth/restartPassword" class="restart">Odzyskaj hasło do konta</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

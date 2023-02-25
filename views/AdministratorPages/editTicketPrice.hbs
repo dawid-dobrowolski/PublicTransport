@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/mainSchema.css">
+    <link rel="stylesheet" href="/EditOffer/editTicketPrice.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+    <!-- MDB -->
+    <title>PrzejedźSię</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav>
+        <div class="logo">
+           <img src="../Resources/logo.png">
+        </div>
+        <div class="menuList">
+            <ul>
+                <li id="active"><i class="fas fa-th-large"></i>Edytuj ofertę</li>
+                <a href="/admin/timetable"><li><i class="fas fa-bus"></i>Rozkład</li></a>
+            </ul>
+        </div>
+        <div class="menuButtons">
+            <a href="/"><button type="submit" class="btn"><i class="fas fa-sign-out-alt"></i> Wyloguj się</button></a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <div class="title"><h1>Edytuj cenę biletu</h1></div>
+            <div class="response">
+                <h2 id="res"></h2>
+            </div>
+            <div class="wrapp">
+                <label>Typ biletu</label>
+                <select id="typ" class="box" name="typbiletu">
+                    <option value="ulgowy">Ulgowy</option>
+                    <option value="normalny">Normalny</option>
+                </select>
+                <label>Okres trwania biletu</label>
+                <select id="okres" class="box" name="dlugoscbiletu">
+                    <option value="3dni">3 dni</option>
+                    <option value="7dni">7 dni</option>
+                    <option value="1mies">1 miesiąc</option>
+                    <option value="2mies">2 miesiące</option>
+                    <option value="5mies">5 miesięcy</option>
+                </select>
+                <label>Typ biletu</label>
+                <select id="typ_linie" class="box" name="typbiletu_linie">
+                    <option value="1linia">1 linia</option>
+                    <option value="wszystkie_linie">Wszystkie linie</option>
+                </select>
+                <label>Wpisz cenę</label>
+                <input type="number" class="price_box" min="1" required/>
+            </div>
+            <div class="optionButtons">
+                <a href="/admin/editOffer"><button style="cursor: pointer;" type="submit" id="cancelBtn" class="btn"></i>Anuluj</button></a>
+                <button style="cursor: pointer;" type="submit" id="saveBtn" class="btn"></i>Zatwierdź</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../EditOffer/editTicketPrice.js"></script>
+</html>

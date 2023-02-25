@@ -1,0 +1,249 @@
+/* ********************************************* */
+
+/*.response {*/
+/*    background-color: white;*/
+/*    border-radius: 8px;*/
+/*    height: fit-content;*/
+/*    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
+/*    color: red;*/
+/*    font-size: 15px;*/
+/*    text-align: center;*/
+/*}*/
+/*.response-positive {*/
+/*    background-color: white;*/
+/*    border-radius: 8px;*/
+/*    height: fit-content;*/
+/*    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
+/*    color: rgb(16, 166, 16);*/
+/*    font-size: 15px;*/
+/*    text-align: center;*/
+
+/*}*/
+
+
+
+a{
+    color: #4b5e7a;
+}
+
+.cena{
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+
+}
+
+.cena p{
+    font-weight: bold;
+}
+
+
+.sign-dostepne-bilety {
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+}
+.sign-dostepne-bilety h2{
+    margin: 0;
+    color: #1D3557;
+}
+
+
+.grid-container-background{
+    display: grid;
+    grid-gap: 5px;
+    height: 700px;
+    margin: 0% 25%;
+    grid-template-rows: 25% 25% 50%;
+
+
+    border-radius: 8px;
+}
+
+
+
+.grid-main-item-typ_biletu{
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+.grid-main-item-dlugosc_trwania{
+    background-color: white;
+    border-radius: 8px;
+
+}
+
+.grid-main-item-formularz{
+    background-color: white;
+    border-radius: 8px;
+}
+
+.grid-main-item-typ_biletu p{
+    margin: 10px 30px;
+
+}
+
+.grid-main-item-dlugosc_trwania p{
+    margin: 10px 30px;
+
+}
+
+.grid-main-item-formularz p{
+    margin: 10px 30px;
+}
+
+
+
+
+
+
+.buttons_1{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+
+}
+
+.buttons_2{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+
+
+
+
+.isHidden {
+    display: none;
+}
+
+.label {
+    display: inline-block;
+    background-color: rgba(237, 239, 242, 0.69);
+    width: 150px;
+    height: 120px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 500%;
+
+    margin-top: -5px;
+
+}
+
+
+.label:hover{
+    background-color: #E1E1E1;
+}
+
+.radio:checked + .label {
+    background-color: #A8DADC;
+}
+
+.label-2{
+    display: inline-block;
+    background-color: rgba(237, 239, 242, 0.69);
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 200%;
+
+}
+
+.label-2:hover{
+    background-color: #E1E1E1;
+}
+
+.radio:checked + .label-2{
+    background-color: #A8DADC;
+}
+
+
+
+
+/* forms */
+
+.backgroud-form{
+    width: 450px;
+    height: 230px;
+    margin: auto;
+    background-color: rgba(237, 239, 242, 0.69);
+    border-radius: 10px;
+}
+
+
+.new-form-group{
+
+    margin: auto;
+}
+
+
+#form-label {
+    margin-top: 20px;
+    margin-left: 30px;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 3px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.form-control {
+    display: block;
+    margin-left: 30px;
+    width: 300px;
+    height: 20px;
+    padding: 1px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 4px;
+
+}
+
+
+.btn-own {
+    align-content: center;
+    color: #fbfbfb;
+    margin-top: 10px;
+    background-color: #4A5D79;
+    border-radius: 10px;
+    height: 40px;
+    width: 208px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-own:hover {
+    color: #fbfbfb;
+    background-color: #1c5185;
+}
+
+
+#btn-zatwierdz{
+    margin-left: 74%;
+}
+
+
+
+
+
+
+
+
+
+

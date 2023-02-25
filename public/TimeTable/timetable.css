@@ -1,0 +1,70 @@
+/*dla podstrony*/
+
+.title {
+    padding-top: 30px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #1D3557;
+
+}
+
+.rozkładyBox h2{
+    color: white;
+    background-color: #A8DADC;
+    border-radius: 6px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 0 10px 0 10px;
+}
+
+
+
+
+.rozkładyBox {
+    margin: 0 100px;
+    padding-bottom: 8%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr))
+}
+
+.autobusyitramwaje {
+    margin-top: 25px;
+    background-color: #ffffff;
+    height: auto;
+    border-radius: 8px;
+}
+
+.linieBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    height: auto;
+}
+
+.liniaBox:hover{
+    color: #000000;
+    background-color: #b4b4b4;
+    cursor: pointer;
+}
+
+.liniaBox {
+    background-color: #E1E1E1;
+    height: auto;
+    width:15%;
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+    border: none;
+    font-size: 2.8vh;
+}
+
+.liniaBox p {
+
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,54 @@
+/*dla podstrony*/
+.title {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #1D3557;
+    margin-bottom: 20px;
+    padding-top: 80px;
+
+}
+
+.background-grid{
+    /*background-color: red;*/
+    display: grid;
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    padding-top: 150px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.isHidden{
+    display: none;
+}
+
+.label {
+    display: inline-block;
+
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 800%;
+    padding-bottom: 5px;
+    color: #1D3557;
+
+}
+
+
+.label:hover{
+    background-color: #E1E1E1;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}

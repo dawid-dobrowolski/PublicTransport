@@ -1,0 +1,45 @@
+.title{
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #1D3557;
+  border-radius: 6px;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.aktualnosciBox {
+  margin: 0px 100px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr))
+}
+
+
+.komunikaty {
+
+  margin-top: 25px;
+  background-color: #FFFFFF;
+  height: 80vh;
+  border-radius: 8px;
+}
+.informacje {
+  border-radius: 8px;
+  margin-top: 25px;
+  background-color: #FFFFFF;
+  height: 80vh;
+}
+
+.newsBox {
+  border-radius: 8px;
+  background-color: #E1E1E1;
+  height: 25%;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.newsBox p {
+  margin: 5px 5px 5px 5px;
+  font-size: 2.1vh;
+  text-align: justify;
+}

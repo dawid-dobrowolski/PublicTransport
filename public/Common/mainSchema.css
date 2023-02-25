@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+}
+
+nav {
+    background-color:#1D3557;
+}
+
+
+.logo {
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+.menuList {
+    position: fixed;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 46px;
+    gap: 16px;
+    width: 232px;
+    height: 507px;
+}
+
+#active {
+    background: #A8DADC;
+}
+.menuList ul li {
+    color:white;
+    font-size: 17px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 12px;
+    width: 192px;
+    height: 25px;
+    border-radius: 10px;
+}
+.menuList ul li:hover {
+    background: #4A5D79;
+}
+.menuList ul li i {
+    padding-right: 10px;
+}
+
+.menuButtons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 208px;
+    height: 122px;
+    left: 40px;
+    top: 80%;
+}
+
+.btn {
+    font-family: 'Inter', sans-serif;
+    align-content: center;
+    color: #fbfbfb;
+    margin-top: 10px;
+    background-color: #4A5D79;
+    border-radius: 10px;
+    height: 50px;
+    width: 208px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn:hover {
+    color: #fbfbfb;
+    background-color: #1c5185;
+}
+
+.title {
+    padding-top: 30px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #1D3557;
+
+}
+#border {
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+}
+.content {
+    background-color:  #EDEFF2;
+}
+a {
+    text-decoration: none;
+}
+.response {
+    background-color: white;
+    border-radius: 8px;
+    height: fit-content;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: red;
+    font-size: 15px;
+    text-align: center;
+  }
+  .response-positive {
+    background-color: white;
+    border-radius: 8px;
+    height: fit-content;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: rgb(16, 166, 16);
+    font-size: 15px;
+    text-align: center;
+  }
